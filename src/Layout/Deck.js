@@ -96,11 +96,9 @@ function Deck() {
             <div className="card-body">
               <div className="row">
                 <div className="col-md-6">
-                  <h5 className="card-title">Front</h5>
                   <p className="card-text">{card.front}</p>
                 </div>
                 <div className="col-md-6">
-                  <h5 className="card-title">Back</h5>
                   <p className="card-text">{card.back}</p>
                   <Link to={`/decks/${deck.id}/cards/${card.id}/edit`}>
                     <button className="btn btn-secondary m-1">Edit</button>

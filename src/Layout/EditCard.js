@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { useParams, useHistory } from "react-router-dom";
 import { readCard, updateCard } from "../utils/api/index";
+import CardForm from "./CardForm";
 
 function EditCard() {
   const { cardId } = useParams();
@@ -33,37 +34,16 @@ function EditCard() {
   return (
     <div>
       <h1>Edit Card</h1>
-      <form onSubmit={handleSubmit}>
-        <div className="mb-3">
-          <label htmlFor="front" className="form-label">
-            Front
-          </label>
-          <textarea
-            className="form-control"
-            id="front"
-            rows="4"
-            value={card.front}
-            onChange={(e) => setCard({ ...card, front: e.target.value })}
-            required
-          />
-        </div>
-        <div className="mb-3">
-          <label htmlFor="back" className="form-label">
-            Back
-          </label>
-          <textarea
-            className="form-control"
-            id="back"
-            rows="4"
-            value={card.back}
-            onChange={(e) => setCard({ ...card, back: e.target.value })}
-            required
-          />
-        </div>
-        <button type="submit" className="btn btn-primary">
-          Save Changes
-        </button>
-      </form>
+      <CardForm
+        cardData={card}
+        onSubmit={handleSubmit}
+        onChange={(field) => (event) => {
+          setCard({
+            ...card,
+            [field]: event.target.value,
+          });
+        }}
+      />
     </div>
   );
 }
