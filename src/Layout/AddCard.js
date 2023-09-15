@@ -17,7 +17,6 @@ function AddCard() {
       try {
         await createCard(deckId, card);
         setCard({ front: "", back: "" });
-        // Instead of redirecting, you can stay on the same page for adding more cards
       } catch (error) {
         console.error("Error adding card:", error);
       }
