@@ -12,7 +12,7 @@ function DeckStudy({ deck }) {
       <div>
         <h2>Not Enough Cards</h2>
         <p>You need at least 3 cards in the deck to start studying.</p>
-        <Link to={`/decks/${deck.id}/add`}>
+        <Link to={`/decks/${deck.id}/cards/new`}>
           <button className="btn btn-primary">Add Cards</button>
         </Link>
       </div>

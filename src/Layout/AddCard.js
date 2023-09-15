@@ -16,14 +16,14 @@ function AddCard() {
     if (card.front.length > 0 && card.back.length > 0) {
       try {
         await createCard(deckId, card);
-        history.push(`/decks/${deckId}`);
         setCard({ front: "", back: "" });
+        // Instead of redirecting, you can stay on the same page for adding more cards
       } catch (error) {
         console.error("Error adding card:", error);
       }
     } else {
       window.alert(
-        "You need to make a valid input for the front and back of the cards"
+        "You need to make a valid input for the front and back of the card"
       );
     }
   };
@@ -41,6 +41,10 @@ function AddCard() {
   }, [deckId]);
 
   const deckName = deck ? deck.name : "Deck Name";
+
+  const handleDoneClick = () => {
+    history.push(`/decks/${deckId}`);
+  };
 
   return (
     <div>
@@ -66,6 +70,9 @@ function AddCard() {
           });
         }}
       />
+      <button className="btn btn-secondary mt-1" onClick={handleDoneClick}>
+        Done
+      </button>
     </div>
   );
 }
