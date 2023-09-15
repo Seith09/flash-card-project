@@ -1,28 +1,35 @@
-Flashcard-o-matic
-Flashcard-o-matic is a web application for creating and studying flashcards. You can use it to create decks of flashcards, add cards to your decks, and study them to improve your knowledge on various topics.
+# Flashcard-o-matic
 
-Features
-Create Decks: Easily create decks of flashcards to organize your study materials.
+Flashcard-o-matic is a powerful web application for creating and studying flashcards, designed to enhance your learning experience.
 
-Add Cards: Add flashcards to your decks, including a front and back side.
+![Flashcard-o-matic Screenshot](./images/screenshot.png)
 
-Study Mode: Study your flashcards with a simple and intuitive interface.
+## Features
 
-Responsive Design: The application is designed to work seamlessly on both desktop and mobile devices.
+- **Create Decks:** Easily organize your study materials by creating decks of flashcards.
+- **Add Cards:** Customize your flashcards with front and back sides for effective learning.
+- **Study Mode:** Seamlessly study your flashcards using an intuitive interface.
+- **Responsive Design:** Access your flashcards on any device with a responsive user interface.
 
-Getting Started
-Follow these steps to get started with the Flashcard-o-matic application:
+## Getting Started
 
-Installation:
+Follow these simple steps to start using Flashcard-o-matic:
+
+### Installation
 
 Clone this repository to your local machine:
+
+```bash
 git clone https://github.com/your-username/flashcard-o-matic.git
+
 
 Setup:
 Install the necessary dependencies using a package manager like npm or yarn:
 
+```bash
 npm install
 Start the development server:
+```bash
 npm start
 
 Usage:
