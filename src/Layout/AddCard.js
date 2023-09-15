@@ -49,7 +49,7 @@ function AddCard() {
     fetchDeck();
   }, [deckId]);
 
-  const deckName = deck.name;
+  const deckName = deck ? deck.name : "Deck Name";
 
   return (
     <div>
