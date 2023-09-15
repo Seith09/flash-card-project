@@ -25,10 +25,8 @@ function DeckStudy({ deck }) {
 
   const handleNext = () => {
     if (isFront) {
-      // Show the back side first
       setIsFront(false);
     } else if (currentCardIndex < cards.length - 1) {
-      // Go to the next card
       setCurrentCardIndex(currentCardIndex + 1);
       setIsFront(true);
     } else {
