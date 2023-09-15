@@ -2,8 +2,6 @@
 
 Flashcard-o-matic is a powerful web application for creating and studying flashcards, designed to enhance your learning experience.
 
-![Flashcard-o-matic Screenshot](./images/screenshot.png)
-
 ## Features
 
 - **Create Decks:** Easily organize your study materials by creating decks of flashcards.
@@ -21,16 +19,17 @@ Clone this repository to your local machine:
 
 ```bash
 git clone https://github.com/your-username/flashcard-o-matic.git
-
+```
 
 Setup:
 Install the necessary dependencies using a package manager like npm or yarn:
-
 ```bash
 npm install
+```
 Start the development server:
 ```bash
 npm start
+```
 
 Usage:
 Open your web browser and navigate to http://localhost:3000 to access the application.
