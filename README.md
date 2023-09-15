@@ -1,5 +1,5 @@
-###Flashcard-o-matic
-##Flashcard-o-matic is a web application for creating and studying flashcards. You can use it to create decks of flashcards, add cards to your decks, and study them to improve your knowledge on various topics.
+Flashcard-o-matic
+Flashcard-o-matic is a web application for creating and studying flashcards. You can use it to create decks of flashcards, add cards to your decks, and study them to improve your knowledge on various topics.
 
 Features
 Create Decks: Easily create decks of flashcards to organize your study materials.
