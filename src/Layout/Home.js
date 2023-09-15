@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { deleteDeck, listDecks } from "../utils/api/index";
+import { Link } from "react-router-dom";
 
 function Home() {
   const [decks, setDecks] = useState([]);
@@ -33,20 +34,34 @@ function Home() {
 
   return (
     <>
-      <button type="button" className="btn btn-secondary mb-3">
-        Create Deck
-      </button>
+      <Link to={`/decks/new`}>
+        <button type="button" className="btn btn-secondary mb-3">
+          Create Deck
+        </button>
+      </Link>
+
       <div>
         {decks.map((deck) => (
           <div key={deck.id} className="border p-3 mb-3">
-            <h1>{deck.name}</h1>
+            <div className="d-flex justify-content-between align-items-center">
+              <h1>{deck.name}</h1>
+              <p className="card-count">
+                {`${deck.cards ? deck.cards.length : 0} cards`}
+              </p>
+            </div>
             <p>{deck.description}</p>
-            <button type="button" className="btn btn-secondary m-1">
-              view
-            </button>
-            <button type="button" className="btn btn-primary m-1">
-              study
-            </button>
+
+            <Link to={`/decks/${deck.id}`}>
+              <button type="button" className="btn btn-secondary m-1">
+                View
+              </button>
+            </Link>
+
+            <Link to={`/decks/${deck.id}/study`}>
+              <button type="button" className="btn btn-primary m-1">
+                Study
+              </button>
+            </Link>
             <button
               type="button"
               className="btn btn-danger float-right"
